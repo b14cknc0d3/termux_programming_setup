@@ -17,12 +17,12 @@ def dependencies_install():
         os.system("pkg update -y && upgrade -y ")
         print(colored("[*]Updated", "green"))
         os.system(
-            "pkg install git python python3 python2 vim neovim tmux zsh curl wget  gem nodejs")
+            "pkg install git python python2 vim neovim tmux zsh curl wget  ruby nodejs")
         print(colored("[+]finished installing some packages!", "green"))
         print(colored("[!] installing oh-my-zsh", "yellow"))
         try:
             os.system("""
-                  bash -c "$(curl -fsSL https://git.io/oh-my-termux)"
+                      curl -fsSL https://git.io/termux  | bash -s  -- --nvim --zsh
                   """)
         except:
             pass
@@ -49,7 +49,7 @@ def dependencies_install():
                           [6] bye bye!
 
                           """),"yellow")
-            os.system("sleep 5")
+            os.system("sleep 10")
             print(colored("myanmar <3 termux ,nvim ,tmux ,zsh xD"))
             myanmar_flags()
             os.system("clear")
