@@ -9,15 +9,6 @@ def myanmar_flags():
         print(banner.decode("utf-8"))
 
 
-myanmar_flags()
-
-os.system("sleep 1.0 && clear")
-print(
-    colored(
-        "[*] You are about to setup programming env for Termux!",
-        "green"))
-os.system("sleep 1.0")
-
 
 def dependencies_install():
     try:
@@ -71,3 +62,14 @@ def dependencies_install():
         sys.exit()
     except BaseException:
         pass
+
+
+if __name__ == "__main__":
+            myanmar_flags()
+
+            os.system("sleep 1.0 && clear")
+            print(colored("[*] You are about to setup programming env for Termux!","green"))
+            os.system("sleep 1.0")
+
+
+            dependencies_install()
