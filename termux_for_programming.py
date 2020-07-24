@@ -22,18 +22,11 @@ def dependencies_install():
         print(colored("[!] installing oh-my-zsh", "yellow"))
         try:
             os.system("""
-                      curl -fsSL https://git.io/termux  | bash -s  -- --nvim --zsh
+                      curl -fsSL https://git.io/termux  | bash -s  -- -t -z -n -p
                   """)
         except:
             pass
-        print(colored("[!] installing oh-my-tmux"))
-        try:
-            os.system("git clone https://github.com/gpakosz/.tmux.git")
-            os.system("ln -s -f .tmux/.tmux.conf && cp .tmux/.tmux.conf.local ~")
-            print("[!]DONE ")
-        except:
-            pass
-        os.system("sleep 0.5")
+
         print(colored("installing amax_vimrc"))
         try:
 
